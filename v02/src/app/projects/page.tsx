@@ -1,0 +1,41 @@
+'use client'
+import { useRouter } from 'next/navigation'
+import ProjectCard from '@/components/Home/ProjectCard';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+
+const Home = () => {
+  const router = useRouter();
+
+  const projects = [
+    { id: '1', name: 'Mombasa – Mtwapa – Kilifi', image: '/DJI_0256-840x620-840x620.jpg' },
+    { id: '2', name: 'Mwache Junction – Tsunza – Mteza', image: '/DSC_0686-840x620-840x620.jpg' },
+    { id: '3', name: 'Athi River – Machakos Turnoff', image: '/MACHAKOS-TURNOFF-840x620-840x620.jpg' },
+    // Add more projects here
+  ];
+
+  return (
+    <div className='flex flex-col h-screen justify-between object-fill'>
+      <div className='flex flex-col h-full'>
+        <Header />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-purple-300 overflow-scroll">
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            id={project.id}
+            name={project.name}
+            image={project.image}
+            onClick={() => router.push(`/project/${project.id}`)}
+          />
+        ))}
+        </div>
+      </div>
+
+      <Footer />
+
+
+    </div>
+  );
+};
+
+export default Home;
