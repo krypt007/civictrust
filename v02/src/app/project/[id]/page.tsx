@@ -5,6 +5,8 @@ import EngineerCard from '@/components/Home/EngineerCard';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
+import CustomProgressBar from "@/components/CustomProgressBar";
+
 const ProjectDetails = () => {
   // const router = useRouter();
   const searchParams = useSearchParams()
@@ -52,6 +54,7 @@ const ProjectDetails = () => {
         workHistory: '10 years in residential and commercial projects.',
         location: 'New York, USA',
       };
+      const progress = 78;
 
   return (
     <div className='flex flex-col h-screen justify-between'>
@@ -66,6 +69,7 @@ const ProjectDetails = () => {
           {project[0].milestones.map((milestone, index) => (
             <li key={index} className="mt-2">{milestone}</li>
           ))}
+          <CustomProgressBar progress={progress} />
         </ul>
         <ContractorCard contractor={contractor} />
         <EngineerCard engineer={project[0].engineer} />

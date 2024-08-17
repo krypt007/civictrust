@@ -4,6 +4,10 @@ import ProjectCard from '@/components/Home/ProjectCard';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import DashChart from '@/components/Charts/DashChart';
+import { PieGraph } from '@/components/Charts/pie-graph';
+import { BarGraph } from '@/components/Charts/bar-graph';
+import { AreaGraph } from '@/components/Charts/area-graph';
+import ProgressGraph from '@/components/Charts/progress-graph';
 
 const Home = () => {
   const router = useRouter();
@@ -20,7 +24,10 @@ const Home = () => {
       <div className='flex flex-col h-full'>
         <Header />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-purple-300 overflow-scroll">
-        <DashChart />
+        {/* <DashChart /> */}
+        <AreaGraph />
+        <PieGraph />
+        <BarGraph />
         {/* {projects.map((project) => (
           <ProjectCard
             key={project.id}
@@ -30,7 +37,9 @@ const Home = () => {
             onClick={() => router.push(`/project/${project.id}`)}
           />
         ))} */}
+        <ProgressGraph />
         </div>
+        
       </div>
 
       <Footer />
