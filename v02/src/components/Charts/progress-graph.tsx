@@ -17,7 +17,7 @@ export default function ProgressGraph() {
       <CardHeader>
         <CardTitle>Progress</CardTitle>
         <CardDescription>
-          You're average more steps a day this year than last year.
+          {`You're average more steps a day this year than last year.`}
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
