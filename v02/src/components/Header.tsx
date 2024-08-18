@@ -1,5 +1,7 @@
+'use client'
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,11 +19,11 @@ const Header = () => {
         <nav className="hidden md:flex space-x-6">
           <Link href="/" className="hover:text-gray-400">Dashboard</Link>
           <Link href="/projects" className="hover:text-gray-400">Projects</Link>
-          {/* <Link href="/data-collection" className="hover:text-gray-400">Data Collection</Link>
+          <Link href="/about" className="hover:text-gray-400">About Us</Link>
           <Link href="/contractors" className="hover:text-gray-400">Contractors</Link>
-          <Link href="/engineers" className="hover:text-gray-400">Engineers</Link>
+          {/* <Link href="/engineers" className="hover:text-gray-400">Engineers</Link>
           <Link href="/profile" className="hover:text-gray-400">Profile</Link> */}
-          <Link href="/admin" className="hover:text-gray-400">Admin</Link>
+          <Link href="/admin" className="hover:text-gray-400">Submit Views</Link>
         </nav>
 
         {/* Mobile Menu Button */}

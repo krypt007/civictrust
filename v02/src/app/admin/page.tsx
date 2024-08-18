@@ -99,17 +99,17 @@ export default function Admin() {
                   className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:text-base"
                 >
                   <Package2 className="h-5 w-5 transition-all group-hover:scale-110" />
-                  <span className="sr-only">Acme Inc</span>
+                  <span className="sr-only">CivicTrust</span>
                 </Link>
                 <Link
-                  href="#"
+                  href="/"
                   className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                 >
                   <Home className="h-5 w-5" />
                   Dashboard
                 </Link>
                 <Link
-                  href="#"
+                  href="/projects"
                   className="flex items-center gap-4 px-2.5 text-foreground"
                 >
                   <ShoppingCart className="h-5 w-5" />
@@ -143,18 +143,18 @@ export default function Admin() {
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="#">Dashboard</Link>
+                  <Link href="/">Dashboard</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="#">Orders</Link>
+                  <Link href="/projects">List of Projects</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage>Recent Orders</BreadcrumbPage>
+                <BreadcrumbPage>Recent Projects</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>

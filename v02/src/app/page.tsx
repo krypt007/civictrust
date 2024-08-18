@@ -1,42 +1,50 @@
 'use client'
-import { useRouter } from 'next/navigation'
-import ProjectCard from '@/components/Home/ProjectCard';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import DashChart from '@/components/Charts/DashChart';
 import { PieGraph } from '@/components/Charts/pie-graph';
 import { BarGraph } from '@/components/Charts/bar-graph';
 import { AreaGraph } from '@/components/Charts/area-graph';
 import ProgressGraph from '@/components/Charts/progress-graph';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 const Home = () => {
-  const router = useRouter();
-
-  const projects = [
-    { id: '1', name: 'Mombasa – Mtwapa – Kilifi', image: '/DJI_0256-840x620-840x620.jpg' },
-    { id: '2', name: 'Mwache Junction – Tsunza – Mteza', image: '/DSC_0686-840x620-840x620.jpg' },
-    { id: '3', name: 'Athi River – Machakos Turnoff', image: '/MACHAKOS-TURNOFF-840x620-840x620.jpg' },
-    // Add more projects here
-  ];
 
   return (
-    <div className='flex flex-col h-screen justify-between object-fill'>
+    <div className='flex flex-col justify-between object-fill  overflow-scroll'>
       <div className='flex flex-col h-full'>
+        <div className='flex w-full object-fill justify-center items-center'>
+          <Image 
+          src={`/home_header.png`}
+          alt='Nairobi skyline'
+          width={2000}
+          height={1000}
+          />
+        </div>
         <Header />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-purple-300 overflow-scroll">
-        {/* <DashChart /> */}
+        <div className='flex flex-col w-full justify-center items-center rounded-md p-5 gap-5'>
+          <div className='text-2xl font-bold'>Welcome to Civic Trust</div>
+          <div>Your Transparency Partner in Government Projects and Fiscal Planning.</div>
+          <Link href={`/admin`}><Button>Get Started</Button></Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-purple-300">
+          <Card>
+            <CardHeader>New Projects</CardHeader>
+            <CardContent>A list of newly started or about to start projects.</CardContent>
+          </Card>
+          <Card>
+            <CardHeader>New Projects</CardHeader>
+            <CardContent>A list of newly started or about to start projects.</CardContent>
+          </Card>
+          <Card>
+            <CardHeader>New Projects</CardHeader>
+            <CardContent>A list of newly started or about to start projects.</CardContent>
+          </Card>
         <AreaGraph />
         <PieGraph />
         <BarGraph />
-        {/* {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            id={project.id}
-            name={project.name}
-            image={project.image}
-            onClick={() => router.push(`/project/${project.id}`)}
-          />
-        ))} */}
         <ProgressGraph />
         </div>
         
