@@ -53,11 +53,11 @@ const Header = () => {
         <nav className="md:hidden bg-gray-800 px-6 py-4">
           <Link href="/" className="block py-2 hover:text-gray-400">Dashboard</Link>
           <Link href="/projects" className="block py-2 hover:text-gray-400">Projects</Link>
-          <Link href="/data-collection" className="block py-2 hover:text-gray-400">Data Collection</Link>
-          <Link href="/contractors" className="block py-2 hover:text-gray-400">Contractors</Link>
+          <Link href="/about" className="block py-2 hover:text-gray-400">About Us</Link>
+          {/* <Link href="/contractors" className="block py-2 hover:text-gray-400">Contractors</Link>
           <Link href="/engineers" className="block py-2 hover:text-gray-400">Engineers</Link>
-          <Link href="/profile" className="block py-2 hover:text-gray-400">Profile</Link>
-          <Link href="/admin" className="block py-2 hover:text-gray-400">Admin</Link>
+          <Link href="/profile" className="block py-2 hover:text-gray-400">Profile</Link> */}
+          <Link href="/admin" className="block py-2 hover:text-gray-400">Submit Views</Link>
         </nav>
       )}
     </header>

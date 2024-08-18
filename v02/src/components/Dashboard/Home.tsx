@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import Header from "@/components/Header";
 
 import Link from 'next/link';
+import { Input } from "../ui/input";
 
 
 const Home = () => {
@@ -24,6 +25,17 @@ const Home = () => {
         </div>
 
          {/** Main Section */}
+         <div className="flex h-full">
+            <div className="flex w-full md:w-[50%]">
+                <div>Project Title:</div>
+                <div><Input /></div>
+            </div>
+            <div className="flex w-full md:w-[50%]">
+                <div>Location:</div>
+                <div><Input /></div>
+            </div>
+
+         </div>
         
     </div>
   )

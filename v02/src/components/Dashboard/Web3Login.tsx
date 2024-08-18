@@ -8,6 +8,7 @@ import {client} from '@/app/client'
 // import { createThirdwebClient } from "thirdweb";
 import { bscTestnet } from "thirdweb/chains";
 import { createWallet,  inAppWallet, } from "thirdweb/wallets";
+import { Button } from '../ui/button';
 
 const wallets = [
   createWallet("io.metamask"),
@@ -27,9 +28,14 @@ const wallets = [
 
 export default function Web3Login() {
   return (
-    <div  className="h-full w-full flex items-center justify-center bg-blue-600">
+    <div  className="h-full w-screen flex flex-col items-center justify-between bg-blue-600  object-fill ">
+      <div className='flex w-screen object-fill justify-end p-2'>
+        <Link href={`/`}><div className='bg-blue-400 hover:bg-red-950 text-white text-sm px-2 py-1 rounded-md'>Dashboard</div></Link>
+
+
+      </div>
       <div className="min-h-screen flex flex-col items-center justify-center bg-blue-600">
-        {/* <Header /> */}
+        
        
         
         <div className='flex w-full justify-center'>
