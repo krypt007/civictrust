@@ -76,7 +76,7 @@ const ProjectForm: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-lg mx-auto p-4 space-y-6 bg-white shadow-md rounded-md"
+      className="w-screen md:max-w-2xl mx-auto p-4 space-y-6 bg-white shadow-md rounded-md"
     >
       <div>
         <label

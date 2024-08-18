@@ -13,7 +13,7 @@ const Home = () => {
     const account = useActiveAccount();
     const connectedWallet = useActiveWallet();
   return (
-    <div className="flex flex-col justify-between bg-purple-950 px-5 h-screen">
+    <div className="flex flex-col justify-between bg-slate-500 px-5 h-screen">
 
        
         <div className="fixed w-full top-0 left-0 z-50 transition-all flex justify-between p-2 bg-blue-800">
