@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 
 import Link from 'next/link';
 import { Input } from "../ui/input";
+import ProjectForm from "../Forms/ProjectForm";
 
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
     const account = useActiveAccount();
     const connectedWallet = useActiveWallet();
   return (
-    <div className="flex flex-col justify-between bg-purple-950 px-5">
+    <div className="flex flex-col justify-between bg-purple-950 px-5 h-screen">
 
        
         <div className="fixed w-full top-0 left-0 z-50 transition-all flex justify-between p-2 bg-blue-800">
@@ -25,16 +26,8 @@ const Home = () => {
         </div>
 
          {/** Main Section */}
-         <div className="flex h-full">
-            <div className="flex w-full md:w-[50%]">
-                <div>Project Title:</div>
-                <div><Input /></div>
-            </div>
-            <div className="flex w-full md:w-[50%]">
-                <div>Location:</div>
-                <div><Input /></div>
-            </div>
-
+         <div className="flex mt-20 overflow-scroll ">
+             <ProjectForm />
          </div>
         
     </div>
